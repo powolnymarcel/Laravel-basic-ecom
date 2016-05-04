@@ -15,7 +15,7 @@
         </div>
         <div class="panel-body">
             <div class="col-md-4">
-                <img src="images/{{$produit->image}}" alt="" class="img-responsive">
+                <img src="../images/{{$produit->image}}" alt="" class="img-responsive">
             </div>
             <div class="col-md-8">
                 <h4>Description: </h4>
@@ -28,8 +28,6 @@
                     </li>
                 </ul>
                 <h4>Vendeur: </h4>
-                <p>{{$produit->description}}</p>
-                <h4>Details:</h4>
                 <ul class="list-group">
                     <li class="list-group-item">
                        Adresse: <strong>{{$produit->adresse}}</strong>
