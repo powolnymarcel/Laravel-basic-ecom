@@ -17,7 +17,7 @@
         <div class="panel-body">
             @foreach($ecom as  $produit)
             <div class="col-md-4"><img src="images/{{$produit->image}}" alt="" class="img-responsive">
-            <h4>{{$produit->titre}}</h4>
+            <h4><a href="ecom/{{$produit->id}}">{{$produit->titre}}</a></h4>
              <p>{{$produit->description}}</p>
             </div>
             @endforeach

@@ -49,7 +49,8 @@ class EcomController extends Controller
      */
     public function show($id)
     {
-        return view('voir');
+        $produit=Ecom::find($id);
+        return view('voir',compact('produit'));
     }
 
     /**
