@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'EcomController@index');
+Route::get('/creation',[
+    'uses'=>'EcomController@create',
+    'as'=>"creation"
+]);
+
+//Routes ecommerce
+Route::resource('ecom', 'EcomController');
+
+//Routes categories
+Route::resource('categories', 'CategoriesController');
