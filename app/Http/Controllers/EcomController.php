@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-
+use App\Ecom;
 class EcomController extends Controller
 {
     /**
@@ -15,7 +15,9 @@ class EcomController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $ecom= Ecom::all();
+        //return view('index',['ecom'=>$ecom]);
+        return view('index',compact('ecom'));
     }
 
     /**
