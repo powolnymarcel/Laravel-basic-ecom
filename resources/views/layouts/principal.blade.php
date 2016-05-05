@@ -8,6 +8,7 @@
     <title>@yield(('titre'))</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 
@@ -33,10 +34,10 @@
 
             <ul class="nav navbar-nav navbar-right">
                 @if(Auth::guest())
-                <li class=""><a href="{{url('auth/login')}}">Connexion</a></li>
-                <li><a href="{{url('auth/register')}}">Inscription</a></li>
+                <li class=""><a href="{{url('/auth/login')}}">Connexion</a></li>
+                <li><a href="{{url('/auth/register')}}">Inscription</a></li>
                 @else
-                <li><a href="{{url('auth/logout')}}">Deconnexion</a></li>
+                <li><a href="{{url('/auth/logout')}}">Deconnexion</a></li>
                 @endif
             </ul>
 
