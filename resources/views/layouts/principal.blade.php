@@ -47,6 +47,11 @@
                    {{Session::get('message')}}
                </div>
                @endif
+            @foreach($errors->all() as $erreur)
+                <div class="alert alert-danger">
+                    {{$erreur}}
+                </div>
+                @endforeach
             @yield('contenu')
         </div>
     </div>
