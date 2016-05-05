@@ -27,8 +27,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class=""><a href="/">Accueil</a></li>
-                <li><a href="{{route('creation')}}">Ajouter</a></li>
+                <li class=""><a href="{{url('/')}}">Accueil</a></li>
+                <li><a href="{{url('creation')}}">Ajouter</a></li>
             </ul>
 
 

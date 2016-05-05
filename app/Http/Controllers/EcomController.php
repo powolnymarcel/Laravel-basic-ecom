@@ -10,8 +10,18 @@ use App\Http\Requests\EnregistrementEcomRequest;
 use App\Http\Requests;
 use App\Ecom;
 use App\Commandes;
+use Auth;
+
 class EcomController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('auth',['except'=>['index','show','search']]);
+
+    }
+
     /**
      * Display a listing of the resource.
      *

@@ -12,11 +12,7 @@
 */
 
 Route::get('/', 'EcomController@index');
-Route::get('/creation',[
-    'uses'=>'EcomController@create',
-    'as'=>"creation"
-]);
-
+Route::get('creation','EcomController@create');
 //Routes ecommerce
 Route::resource('ecom', 'EcomController');
 
