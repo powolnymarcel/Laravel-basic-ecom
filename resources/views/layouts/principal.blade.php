@@ -29,6 +29,18 @@
                 <li class=""><a href="/">Accueil</a></li>
                 <li><a href="{{route('creation')}}">Ajouter</a></li>
             </ul>
+
+
+            <ul class="nav navbar-nav navbar-right">
+                @if(Auth::guest())
+                <li class=""><a href="{{url('auth/login')}}">Connexion</a></li>
+                <li><a href="{{url('auth/register')}}">Inscription</a></li>
+                @else
+                <li><a href="{{url('auth/logout')}}">Deconnexion</a></li>
+                @endif
+            </ul>
+
+
         </div><!--/.nav-collapse -->
     </div>
 </nav>

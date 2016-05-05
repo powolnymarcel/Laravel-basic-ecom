@@ -22,21 +22,22 @@
                 {!! csrf_field() !!}
                 <div class="form-group">
                     <label for="nom">Nom</label>
-                    <input type="text" id="nom" class="form-control" value="{{old('nom')}}">
+                    <input type="text" id="nom" name="nom" class="form-control" value="{{old('nom')}}">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" class="form-control" value="{{old('email')}}">
+                    <input type="email" id="email" name="email" class="form-control" value="{{old('email')}}">
                 </div>
 
                 <div class="form-group">
                     <label for="password">Mot de passe</label>
-                    <input type="password" id="password" class="form-control" >
+                    <input type="password" name="password" id="password" class="form-control" >
                 </div>
 
                 <div class="form-group">
-                    <label for="password_confirm">Confirmation du mot de passe</label>
-                    <input type="password" id="password_confirm" class="form-control" >
+                    <label for="password_confirmation">Confirmation du mot de passe</label>
+                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" >
+                </div>
 
 
                     <button class="btn btn-primary" type="submit">Envoyer</button>
