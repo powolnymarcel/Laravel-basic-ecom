@@ -16,13 +16,13 @@ class StoreEcomCommande extends Commande implements SelfHandling{
         public $adresse;
         public $email;
         public $tel;
-        public $utilisateur_id;
+        public $proprietaire_id;
 
 
 
 
     //Crée une nouvelle instance de commande
-    public function __construct($titre,$categorie_id,$description,$prix,$etat,$image,$adresse,$email,$tel,$utilisateur_id)
+    public function __construct($titre,$categorie_id,$description,$prix,$etat,$image,$adresse,$email,$tel,$proprietaire_id)
     {
         $this->titre=$titre;
         $this->categorie_id=$categorie_id;
@@ -33,7 +33,7 @@ class StoreEcomCommande extends Commande implements SelfHandling{
         $this->adresse=$adresse;
         $this->email=$email;
         $this->tel=$tel;
-        $this->utilisateur_id=$utilisateur_id;
+        $this->proprietaire_id=$proprietaire_id;
     }
 
     public function handle()
@@ -48,7 +48,7 @@ class StoreEcomCommande extends Commande implements SelfHandling{
          'adresse'=>$this->adresse,
          'email'=>$this->email,
          'tel'=>$this->tel,
-         'utilisateur_id'=>$this->utilisateur_id
+         'utilisateur_id'=>$this->proprietaire_id
         ]);
     }
 

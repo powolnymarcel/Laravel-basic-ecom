@@ -3,3 +3,9 @@ img{
     border-radius: 10px;
     padding: 10px;
 }
+
+.ecom-controls form{
+    float: right;
+    display: inline;
+    margin-left:10px;
+}

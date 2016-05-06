@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield(('titre'))</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{url('css/style.css')}}">
+
 </head>
 
 <body>

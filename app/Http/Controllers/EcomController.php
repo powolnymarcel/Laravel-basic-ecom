@@ -8,6 +8,9 @@ use App\Commandes\StoreEcomCommande;
 use App\Http\Requests\MiseAjourEcomRequest;
 use App\Commandes\UpdateEcomCommande;
 
+use App\Commandes\DestroyEcomCommande;
+
+
 use Illuminate\Http\Request;
 
 
@@ -65,8 +68,8 @@ class EcomController extends Controller
         $adresse= $request->input('adresse');
         $email= $request->input('email');
         $tel= $request->input('tel');
-        //$utilisateur_id= Auth::user()->id;
-        $utilisateur_id= 1;
+        //$proprietaire_id= Auth::user()->id;
+        $proprietaire_id=Auth::user()->id;
 
         // Verifier si l'image a été uploadée
 
@@ -85,7 +88,7 @@ class EcomController extends Controller
         //Commande de création
 
 
-        $commande = new StoreEcomCommande($titre,$categorie_id,$description,$prix,$etat,$image_nom_du_fichier,$adresse,$email,$tel,$utilisateur_id);
+        $commande = new StoreEcomCommande($titre,$categorie_id,$description,$prix,$etat,$image_nom_du_fichier,$adresse,$email,$tel,$proprietaire_id);
         $this->dispatch($commande);
 
         return redirect(route('ecom.index'))->with('message','Liste cree');
@@ -135,8 +138,7 @@ class EcomController extends Controller
         $adresse= $request->input('adresse');
         $email= $request->input('email');
         $tel= $request->input('tel');
-        //$utilisateur_id= Auth::user()->id;
-        $utilisateur_id= Auth::user()->id;
+        //$proprietaire_id= Auth::user()->id;
 
         //Il faut savoir le nom actuel de l'image en BDD
         $NomDuFichierImageCourant= Ecom::find($id)->image;
@@ -171,6 +173,9 @@ class EcomController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $commande = new DestroyEcomCommande($id);
+            $this->dispatch($commande);
+        return redirect(route('ecom.index'))->with('message','Produit supprimé');
+
     }
 }

@@ -37,9 +37,18 @@
                 </ul>
             </div>
 
-            <div class="pull-right ecomControle">
+            @if(!Auth::guest())
+            @if(Auth::user()->id == $produit->proprietaire_id)
+            <div class="pull-right ecom-controls">
                 <a href="{{url('ecom/'.$produit->id.'/edit')}}" class="btn btn-default">Editer</a>
+                {!! Form::open(['method'=>'DELETE','route'=>['ecom.destroy',$produit->id]]) !!}
+                    {{Form::submit('Supprimer',$attributes=['class'=>'btn btn-danger'])}}
             </div>
+
+                @endif
+
+            @endif
+
         </div>
     </div>
 @stop
