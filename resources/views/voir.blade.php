@@ -37,7 +37,11 @@
                 </ul>
             </div>
 
+            <div class="pull-right ecomControle">
+                <a href="{{url('ecom/'.$produit->id.'/edit')}}" class="btn btn-default">Editer</a>
+            </div>
         </div>
-    </div>@stop
+    </div>
+@stop
 
 
