@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Ecom extends Model
 {
     protected $table ='ecom';
-    protected $fillable=['titre','categorie_id','description','prix','image','etat','adresse','email','tel'];
+    protected $fillable=['titre','categorie_id','description','prix','image','etat','adresse','email','tel','proprietaire_id'];
     protected $hidden=[];
 
     public function categorie(){

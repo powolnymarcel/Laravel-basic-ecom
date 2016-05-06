@@ -48,7 +48,7 @@ class StoreEcomCommande extends Commande implements SelfHandling{
          'adresse'=>$this->adresse,
          'email'=>$this->email,
          'tel'=>$this->tel,
-         'utilisateur_id'=>$this->proprietaire_id
+         'proprietaire_id'=>$this->proprietaire_id
         ]);
     }
 
